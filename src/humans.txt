@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Liu Huawei -- ZZULI -- QQ:609695909
+                           Facebook:Hughie Liu
+
+# THANKS
+
+   A Pen created at CodePen.io by Gavyn Caldwell (http://codepen.io/gavman1995/pen/pbGJYG)
+   which inspired me a lot.Thanks for your pen.
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    (Apache Server Configs), jQuery, Grunt, BootStrap
