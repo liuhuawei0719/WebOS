@@ -12,15 +12,11 @@ $(function(){
     $('#close-internet').click(function () {
         $('.internet').removeClass('open');
         if ($('.settings').hasClass('open') == true) {
+            // $('.settings').addClass('open');
             $('.settings').removeClass('bottom');
         }
     });
 // if($('.settings').hasClass('open') == true && $('.internet').hasClass('open') == true){
-    $('.internet').click(function() {
-        // $('.internet').removeClass('bottom').addClass('open');
-        // $('.settings').addClass('bottom');
-        $('.settings').addClass('bottom');
-    });
 // }
     $('#settings').click(function () {
         $('.settings').addClass('open');
