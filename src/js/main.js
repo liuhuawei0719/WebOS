@@ -11,12 +11,19 @@ $(function(){
     });
     $('#close-internet').click(function () {
         $('.internet').removeClass('open');
+        $('.internet').removeClass('bottom');
+        $('.settings').removeClass('bottom');
         if ($('.settings').hasClass('open') == true) {
             // $('.settings').addClass('open');
             $('.settings').removeClass('bottom');
         }
     });
 // if($('.settings').hasClass('open') == true && $('.internet').hasClass('open') == true){
+    $('.internet').click(function() {
+        // $('.internet').removeClass('bottom').addClass('open');
+        // $('.settings').addClass('bottom');
+        $('.settings').addClass('bottom');
+    });
 // }
     $('#settings').click(function () {
         $('.settings').addClass('open');
@@ -33,8 +40,8 @@ $(function(){
 
     $('div.imag').click(function () {
         var imag = $(this);
-        $('.imag').children().removeClass('chosen');
-        imag.children().addClass('chosen');
+        $('.imag').removeClass('chosen');
+        imag.addClass('chosen');
         var url = 'url(' + imag.children().attr('src') + ') no-repeat center center fixed';
 
         $('body').css({ 'background': url, 'background-size': 'cover' });

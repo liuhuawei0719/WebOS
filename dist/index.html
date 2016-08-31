@@ -6,16 +6,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>WebOS-demo by Liu Huawei</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/webOS-demo.min.css">
         <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+        <style>
+
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -23,20 +25,16 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="top-bar">
-            <div>
-                <img src="http://icons.iconarchive.com/icons/custom-icon-design/mono-business/256/target-icon.png"/>
-            </div>
-            <p>File</p>
-            <p>Edit</p>
-            <p>View</p>
-            <p>Window</p>
-            <p>Help</p>
-        </div>
         <div class="screen">
             <div class="dock bottom">
+                <div style="border:none;">
+                    <img id="win_start" src="img/icons/windowsstart.png"/>
+                </div>
+                <!--<div class="bottom_search">-->
+                    <!--<input type="text" placeholder="搜索Web和Windows">-->
+                <!--</div>-->
                 <div>
-                    <img id="settings" src="http://downloadicons.net/sites/default/files/settings-icon-61501.png"/>
+                    <img id="settings" src="img/icons/settings.png"/>
                 </div>
                 <div>
                     <img id="chrome" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/chrome-512.png"/>
@@ -45,92 +43,126 @@
 
             <div class="settings">
                 <div class="app-top-bar">
-                    <div>
-                        <img id="close-settings" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"/>
+                    <div class="icon-container">
+                        <div class="icon-wapper">
+                            <img id="close-settings" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"/>
+                        </div>
                     </div>
-
-                    <div></div>
-                    <div></div>
+                    <div class="search-bar">
+                        <div class="search-bar-icon">
+                            <img src="http://downloadicons.net/sites/default/files/settings-icon-61501.png" alt="">
+                        </div>
+                        <span>设置</span>
+                    </div>
                 </div>
 
-                <div class="background-img">
-                    <h3>Choose Background Image</h3>
-                    <div class="imag" id="img1">
-                        <img src="http://99pcwallpapers.com/wp-content/uploads/abstract-beach-high-definition-wallpaper-for-desktop-background-download-beach-images-free.jpg"/>
-                    </div>
+                    <div class="os-content os-row">
+                        <div id="leftControlList" class="os-col-xs-3">
+                            <div id="segmentedControls" class="os-segmented-control os-segmented-control-inverted os-segmented-control-vertical">
+                               <a class="os-control-item" data-index="0" href="#content1">桌面背景</a>
+                                <a class="os-control-item" data-index="1" href="#content1">导航显示</a>
+                            </div>
+                        </div>
+                        <div id="segmentedControlContents" class="os-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+                            <div id="content1" class="os-control-content">
+                                      <div class="background-img">
+                                          <h3>选择桌面背景</h3>
+                                          <div class="imag chosen" id="img1">
+                                              <img src="img/girl1.jpg"/>
+                                          </div>
 
-                    <div class="imag" id="img2">
-                        <img class="chosen" src="http://www.toptenpack.com/wp-content/uploads/2015/08/abstract-tree-background-wallpapers.jpeg"/>
-                    </div>
+                                          <div class="imag" id="img2">
+                                              <img src="img/girl2.jpg"/>
+                                          </div>
 
-                    <div class="imag" id="img3">
-                        <img src="http://cdn.pcwallart.com/images/dark-forest-background-wallpaper-1.jpg"/>
-                    </div>
+                                          <div class="imag" id="img3">
+                                              <img src="img/girl3.jpg"/>
+                                          </div>
 
-                    <div class="imag" id="img4">
-                        <img src="http://genesisbcs.com/wp-content/upLoads/2015/01/background_square_greenblue.jpg"/>
-                    </div>
+                                          <div class="imag" id="img4">
+                                              <img src="img/girl4.jpg"/>
+                                          </div>
 
-                    <div class="imag" id="img5">
-                        <img src="https://images4.alphacoders.com/132/132008.jpg"/>
-                    </div>
+                                          <div class="imag" id="img5">
+                                              <img src="img/girl5.jpg"/>
+                                          </div>
 
+                                          <div class="imag" id="img6">
+                                              <img src="img/girl6.jpg"/>
+                                          </div>
+
+                                          <div class="imag" id="img7">
+                                              <img src="img/girl7.jpg"/>
+                                          </div>
+
+                                          <div class="imag" id="img8">
+                                              <img src="img/girl8.jpg"/>
+                                          </div>
+
+                                          <div class="imag" id="img9">
+                                              <img src="img/girl9.jpg"/>
+                                          </div>
+                                      </div>
+                                </div>
+
+                            <div id="content2" class="os-control-content">
+                                <div class="dock-settings">
+                                    <h3>切换导航显示</h3>
+                                          <div class="dock-sliders">
+                                              <h4>隐藏工具栏</h4>
+                                              <div class="slider" id="dock-hidden-slider">
+                                                  <div class="slider-line"></div>
+                                                  <div class="slider-circle"></div>
+                                              </div>
+                                          </div>
+
+                                          <div class="dock-sliders">
+                                              <h4>底部显示</h4>
+                                              <div class="slider dock-position-slider slider-active" id="bottom">
+                                                  <div class="slider-line"></div>
+                                                  <div class="slider-circle"></div>
+                                              </div>
+                                          </div>
+
+                                          <div class="dock-sliders">
+                                              <h4>右侧显示</h4>
+                                              <div class="slider dock-position-slider" id="right">
+                                                  <div class="slider-line"></div>
+                                                  <div class="slider-circle"></div>
+                                              </div>
+                                          </div>
+
+                                       <div class="dock-sliders">
+                                              <h4>左侧显示</h4>
+                                              <div class="slider dock-position-slider" id="left">
+                                                  <div class="slider-line"></div>
+                                                  <div class="slider-circle"></div>
+                                              </div>
+                                       </div>
+                                </div>
+                            </div>
+                    <!--<div></div>-->
+                    <!--<div></div>-->
+                        </div>
+                  </div>
                 </div>
-
-                <div class="dock-settings">
-
-                    <div class="dock-sliders">
-                        <h3>Hide Dock</h3>
-                        <div class="slider" id="dock-hidden-slider">
-                            <div class="slider-line"></div>
-                            <div class="slider-circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="dock-sliders">
-                        <h3>Position: Bottom</h3>
-                        <div class="slider dock-position-slider slider-active" id="bottom">
-                            <div class="slider-line"></div>
-                            <div class="slider-circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="dock-sliders">
-                        <h3>Postion: Right</h3>
-                        <div class="slider dock-position-slider" id="right">
-                            <div class="slider-line"></div>
-                            <div class="slider-circle"></div>
-                        </div>
-                    </div>
-
-                    <div class="dock-sliders">
-                        <h3>Position: Left</h3>
-                        <div class="slider dock-position-slider" id="left">
-                            <div class="slider-line"></div>
-                            <div class="slider-circle"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
 
             <div class="internet">
-                <div class="app-top-bar">
-                    <div>
-                        <img id="close-internet" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"/>
-                    </div>
+            <div class="app-top-bar">
+                <div>
+                    <img id="close-internet" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"/>
                 </div>
-                <iframe src="http://www.bing.com/"></iframe>
             </div>
+            <iframe src="http://www.bing.com/"></iframe>
         </div>
-
+      </div>
 
         <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+        <script>window.jQuery || document.write('<script src="frameworks/jquery-2.1.1.min.js"><\/script>')</script>
         <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js'></script>-->
         <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js'></script>-->
         <!--<script src="js/webOS-demo-full.js"></script>-->
-        <script src="js/main.js"></script>
+        <script src="js/webOS-demo-full.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

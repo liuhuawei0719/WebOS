@@ -13,8 +13,12 @@ module.exports = function(grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['dist/js/**.js'],
+                src: ['src/js/**.js'],
                 dest: 'dist/js/<%= pkg.name %>-full.js'
+            },
+            cssdist:{
+                src: ['src/css/**.css'],
+                dest: 'dist/css/<%= pkg.name %>.css'
             }
         },
 
@@ -86,10 +90,11 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 expand: true,
-                src: 'src/*',
-                dest: 'dist/',
-                flatten: true,
-                filter: 'isFile'
+                cwd: 'src',
+                src: '**/*',
+                dest: 'dist'
+                // flatten: true,
+                // filter: 'isFile'
             }
         },
 
@@ -98,7 +103,7 @@ module.exports = function(grunt) {
             target: {
                 files: [{
                     expand: true,
-                    cwd: 'src/css',
+                    cwd: 'dist/css',
                     src: ['*.css', '!*.min.css'],
                     dest: 'dist/css',
                     ext: '.min.css'
