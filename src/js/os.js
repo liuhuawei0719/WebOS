@@ -85,11 +85,13 @@ contents.querySelector('.os-control-content').classList.add('os-active');
         }
     };
     //滚动到指定content
-    var scrollTo = function(index) {
-        contentsElem.scrollTop = contentTops[index];
-    };
-    controlsElem.on('click', '.os-control-item', function(e) {
-        scrollTo(this.getAttribute('data-index'));
-        return false;
-    });
+    // var scrollTo = function(index) {
+    //     contentsElem.scrollTop = contentTops[index];
+    // };
+    // controlListElem.on('click', '.os-control-item', function(e) {
+    //     scrollTo(this.getAttribute('data-index'));
+    //     return false;
+    // });
 })();
+
+

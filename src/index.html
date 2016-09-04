@@ -16,25 +16,44 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/os.css">
-        <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
-        <style>
-
-        </style>
+        <link rel="stylesheet" href="css/toastr.css">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <!--progress bar-->
+        <div class="progress">
+            <div class="text-container">
+                <span class="reg-text">Windows</span>
+                <span class="letter">L</span><span class="letter">o</span><span class="letter">a</span><span class="letter">d</span>
+                <span class="letter">C</span><span class="letter">o</span><span class="letter">m</span><span class="letter">p</span><span class="letter">l</span><span class="letter">e</span><span class="letter">t</span><span class="letter">e</span><span class="letter">.</span><span class="letter">.</span><span class="letter">.</span>
+            </div>
+            <div class="progressbar"></div>
+            <div class="progresstext">
+                <span class='fix_load_caption'></span>
+                <span class="current"></span>/
+                <span class="total"></span>
+            </div>
+            <button id="start_button">Enter Now</button>
+        </div>
+
 
         <!-- Add your site or application content here -->
-        <div class="screen">
+        <div class="screen" id="screen">
+            <div class="app_items" id="seven_heros">
+                <img src="img/icons/seven_heros.png" alt="">
+                <p class="caption">七雄争霸</p>
+            </div>
+            <audio id="start_os"><source src="audio/3374.wav"></audio>
             <div class="dock bottom">
-                <div style="border:none;">
+                <div style="border:none;margin-right:0">
                     <img id="win_start" src="img/icons/windowsstart.png"/>
                 </div>
-                <!--<div class="bottom_search">-->
-                    <!--<input type="text" placeholder="搜索Web和Windows">-->
-                <!--</div>-->
+                <div class="bottom_search">
+                    <div class="search_mask"></div>
+                    <input type="text" placeholder="搜索Web和Windows">
+                </div>
                 <div>
                     <img id="settings" src="img/icons/settings.png"/>
                 </div>
@@ -150,21 +169,26 @@
                 </div>
 
             <div class="internet">
-            <div class="app-top-bar">
+                <div class="app-top-bar">
                 <div>
                     <img id="close-internet" src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png"/>
                 </div>
+                </div>
+            <iframe></iframe>
+             </div>
             </div>
-            <iframe src="http://www.bing.com/"></iframe>
-        </div>
 
-        <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="frameworks/jquery-2.1.1.min.js"><\/script>')</script>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/frameworks/jquery-2.1.1.min.js"><\/script>')</script>
         <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js'></script>-->
         <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js'></script>-->
         <!--<script src="js/webOS-demo-full.js"></script>-->
         <script src="js/main.js"></script>
         <script src="js/os.js"></script>
+        <script src="js/toastr.js"></script>
+        <script src="js/plugins/BootstrapMenu.min.js"></script>
+        <script src="js/plugins/draggabilly.pkgd.min.js"></script>
+        <script src="js/plugins.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -123,6 +123,6 @@ module.exports = function(grunt) {
     //注册任务
     grunt.registerTask('minall',['uglify:buildall']);
     // grunt.registerTask('test', ['jshint', 'qunit']);
-    grunt.registerTask('default', ['jshint','cssmin','copy','concat','uglify','watch']);
-
+    grunt.registerTask('all', ['jshint','cssmin','copy','concat','uglify','watch']);
+    grunt.registerTask('defalut',['copy','concat','cssmin','uglify']);
 };
